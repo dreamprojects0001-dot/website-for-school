@@ -47,16 +47,25 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        navy: {
+          DEFAULT: "hsl(220 100% 17%)",
+          light: "hsl(220 100% 25%)",
+          dark: "hsl(220 100% 10%)",
         },
+        royal: {
+          DEFAULT: "hsl(210 83% 56%)",
+          light: "hsl(210 83% 65%)",
+          dark: "hsl(210 83% 45%)",
+        },
+        gold: {
+          DEFAULT: "hsl(51 100% 50%)",
+          light: "hsl(51 100% 60%)",
+          dark: "hsl(51 100% 40%)",
+        },
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +89,77 @@ export default {
             height: "0",
           },
         },
+        fadeUp: {
+          from: {
+            opacity: "0",
+            transform: "translateY(30px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        fadeIn: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        slideInLeft: {
+          from: {
+            opacity: "0",
+            transform: "translateX(-50px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        slideInRight: {
+          from: {
+            opacity: "0",
+            transform: "translateX(50px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        scaleIn: {
+          from: {
+            opacity: "0",
+            transform: "scale(0.9)",
+          },
+          to: {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
+        float: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-20px)",
+          },
+        },
+        rotateSlow: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        fadeUp: "fadeUp 0.6s ease-out",
+        fadeIn: "fadeIn 0.5s ease-out",
+        slideInLeft: "slideInLeft 0.6s ease-out",
+        slideInRight: "slideInRight 0.6s ease-out",
+        scaleIn: "scaleIn 0.5s ease-out",
+        float: "float 3s ease-in-out infinite",
+        rotateSlow: "rotateSlow 20s linear infinite",
       },
     },
   },
